@@ -1,0 +1,7 @@
+#hero {
+  height: calc(100vh - 2rem);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
