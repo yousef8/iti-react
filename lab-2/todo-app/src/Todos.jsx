@@ -1,10 +1,13 @@
 import Todo from "./components/Todo";
 
-export default function Todos({ todos }) {
+export default function Todos({ todos, deleteTodo }) {
   return (
     <>
       {todos.map((todo) => (
-        <Todo key={todo.id} todo={todo}></Todo>
+        <div key={todo.id}>
+          <Todo todo={todo}></Todo>
+          <button onClick={deleteTodo(todo.id)}>delete</button>
+        </div>
       ))}
     </>
   );

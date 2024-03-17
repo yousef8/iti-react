@@ -16,11 +16,19 @@ function App() {
     setTodos(newTodos);
   }
 
+  function deleteTodo(todoId) {
+    return () => {
+      const newTodos = todos.filter((todo) => todo.id !== todoId);
+      console.log(newTodos);
+      setTodos(newTodos);
+    };
+  }
+
   return (
     <>
       <h1>To-Do App</h1>
       <ToDoForm addTodo={addTodo}></ToDoForm>
-      <Todos todos={todos}></Todos>
+      <Todos todos={todos} deleteTodo={deleteTodo}></Todos>
     </>
   );
 }
