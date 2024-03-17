@@ -3,11 +3,12 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import { useRef } from "react";
 
-export default function ToDoForm() {
+export default function ToDoForm({ addTodo }) {
   let todo = useRef("");
 
   function handleInput() {
-    console.log(todo.current.value);
+    addTodo(todo.current.value);
+    todo.current.value = "";
   }
   return (
     <>
