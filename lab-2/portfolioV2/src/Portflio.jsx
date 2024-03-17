@@ -15,9 +15,12 @@ export default function Portfolio() {
       <h1>Portfolio</h1>
       <div className="projects">
         {projects.map((project, idx) => (
-          <Fragment key={idx}>
+          <div
+            key={idx}
+            style={{ border: idx % 2 ? "3px solid blue" : "3px solid red" }}
+          >
             <ProjectCard name={project}></ProjectCard>
-          </Fragment>
+          </div>
         ))}
       </div>
     </section>
