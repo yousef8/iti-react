@@ -1,6 +1,5 @@
 import productsList from "../assets/products.json";
 import ProductCard from "../components/ProductCard";
-import "./ProductsList.css";
 
 export default function ProductsList() {
   const products = productsList.products;

@@ -1,11 +1,11 @@
+import { RouterProvider } from "react-router-dom";
 import "./App.css";
-import ProductsList from "./pages/ProductsList";
+import router from "./router";
 
 function App() {
   return (
     <>
-      <h1>Products List</h1>
-      <ProductsList></ProductsList>
+      <RouterProvider router={router}></RouterProvider>
     </>
   );
 }
