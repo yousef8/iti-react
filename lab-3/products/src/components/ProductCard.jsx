@@ -7,7 +7,7 @@ export default function ProductCard({ product }) {
       <Card.Img variant="top" src={product.thumbnail} />
       <Card.Body>
         <Card.Title>
-          <Link to={`/${product.id}`}>{product.title}</Link>
+          <Link to={`/products/${product.id}`}>{product.title}</Link>
         </Card.Title>
         <Card.Text>{product.description}</Card.Text>
       </Card.Body>

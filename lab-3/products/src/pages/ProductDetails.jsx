@@ -1,5 +1,6 @@
 import productsList from "../assets/products.json";
 import { useParams } from "react-router-dom";
+import NotFound from "./NotFound";
 
 export default function ProductDetails() {
   const productId = useParams().productId;
@@ -7,7 +8,7 @@ export default function ProductDetails() {
   const product = products.find(
     (product) => product.id == +parseInt(productId)
   );
-  if (!product) return;
+  if (!product) return <NotFound></NotFound>;
 
   return (
     <>
