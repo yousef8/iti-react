@@ -1,9 +1,11 @@
 import "./App.css";
+import SignUpForm from "./Form";
 
 function App() {
   return (
     <>
-      <h1>React Form App</h1>
+      <h1 style={{ textAlign: "center" }}>React Form App</h1>
+      <SignUpForm></SignUpForm>
     </>
   );
 }
